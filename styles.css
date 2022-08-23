@@ -33,6 +33,12 @@ h1, span {
 h1 { 
     font-size: 32px;
     font-weight: 700;
+    line-height: 1em;
+    margin-bottom: -5px;
+}
+
+p   {
+    line-height: 1.5em;
 }
 
 h2, p, button, del {
@@ -45,14 +51,32 @@ h2, p, button, del {
 button {
     background-color:  hsl(158, 36%, 37%);
     color: hsl(0, 0%, 100%);
+    width: 100%;
+    line-height: 2em;
+    border-style: none;
+    border-radius: 8px;
+    padding: 0.8em;
+    margin: 5% auto;
 
+}
+
+#price {
+    font-size: 32px;
+    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+#sub {
+    letter-spacing: 0.3em;
+    margin-bottom: -13px;
 }
 
 @media (max-width: 768px){
     .container {
         grid-template-areas: 'image' 'texto';
         max-width: 90vw;
-        margin: 10% auto;
+        margin: 8% auto;
     }
 
     img {
