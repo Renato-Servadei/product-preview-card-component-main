@@ -21,10 +21,6 @@ body {
 }
 
 
-img {
-    max-width: 100%;
-    height: 100%;
-}
 
 h1, span {
     font-family: Fraunces;
@@ -44,6 +40,7 @@ p   {
 h2, p, button, del {
     font-family: Montserrat;
     font-size: 14px;
+    font-weight: 500;
     color: hsl(228, 12%, 48%)
 
 }
@@ -61,7 +58,7 @@ button {
 }
 
 #price {
-    font-size: 32px;
+    font-size: 30px;
     color: hsl(158, 36%, 37%);
     font-weight: 700;
     margin-right: 10px;
@@ -72,7 +69,7 @@ button {
     margin-bottom: -13px;
 }
 
-@media (max-width: 768px){
+@media (max-width: 767px){
     .container {
         grid-template-areas: 'image' 'texto';
         max-width: 90vw;
@@ -81,6 +78,7 @@ button {
 
     img {
         border-radius: 10px 10px 0 0;
+        max-width: 100%;
     }
 
     .text {
@@ -90,10 +88,46 @@ button {
 }
 
 @media (min-width: 768px){
+
+    body {
+        height: 100vh;
+
+    }
     .container {
+        position: relative;
+        margin: 0 auto;
+        padding-top: 8%;
+        grid-template-columns: 50% 50%;
         grid-template-areas: 'image texto';
+        width: 40%;
+        height: 20%;
+    }
+
+    img {
+        height: 100%;
+        max-width: 100%; 
+        border-radius: 10px 0 0 10px;
+    }
+
+    .text {
+        border-radius: 0 10px 10px 0 ;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .money {
+        display: flex;
+        flex-direction: row;
     }
     
+    footer {
+        position: fixed;
+        left: 40%;
+        bottom: 3%;
+    }
+
+
 }
 
 
